@@ -1,0 +1,37 @@
+# Makefile for UNIX 
+
+# the compiler: gcc for C program, define as g++ for C++ 
+CC = gcc 
+
+# the static library archiver 
+AR = ar rcs 
+
+# compiler flags: 
+# -g enable debugging 
+# -Wall turn on all warnings 
+# -D__USE_FIXED_PROTOTYPES__ force the compiler to use the correct headers 
+# -ansi don’t use GNU extensions, stick to ANSI 
+# -std=c99 use newer version 
+CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99 
+
+#libraries 
+#custom
+COMPARERS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/comparers/libcomparers.a
+
+# the build target executable: 
+TARGET = unit_tests
+LIBRARY = libunit_tests.a
+
+all: $(TARGET)
+
+$(TARGET): $(LIBRARY)
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY) $(COMPARERS_LIBRARY)
+
+$(LIBRARY): assertion.o
+	$(AR) $(LIBRARY) assertion.o
+
+assertion.o: test/assertion.c test/assertion.h common/terminal.h
+	$(CC) $(CFLAGS) -c test/assertion.c  
+
+clean: 
+	$(RM) $(TARGET) $(LIBRARY) assertion.o
