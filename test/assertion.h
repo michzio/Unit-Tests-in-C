@@ -10,6 +10,7 @@
 void assert_not_null(const void *arg, const char *test_name);
 void assert_null(const void *arg, const char *test_name);
 void assert_equal(const void *l_arg, const void *r_arg, compare_func_t cmp_func, const char *test_name);
+void assert_equal_array(const void *l_arg, const void *r_arg, const size_t len, compare_array_func_t cmp_func, const char *test_name);
 void assert_equal_int(const int l_arg, const int r_arg, const char *test_name);
 void assert_equal_float(const float l_arg, const float r_arg, const char *test_name);
 void assert_not_equal(const void *l_arg, const void *r_arg, compare_func_t cmp_func, const char *test_name);

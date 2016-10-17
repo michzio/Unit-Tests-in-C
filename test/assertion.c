@@ -27,6 +27,13 @@ void assert_equal(const void *l_arg, const void *r_arg, compare_func_t cmp_func,
         printf(ANSI_COLOR_RED "%s: failed!" ANSI_COLOR_RESET "\n", test_name);
 }
 
+void assert_equal_array(const void *l_arg, const void *r_arg, const size_t len, compare_array_func_t cmp_func, const char *test_name) {
+    if(cmp_func(l_arg, r_arg, len) == 0)
+        printf(ANSI_COLOR_GREEN "%s: passed." ANSI_COLOR_RESET "\n", test_name);
+    else
+        printf(ANSI_COLOR_RED "%s: failed!" ANSI_COLOR_RESET "\n", test_name);
+}
+
 void assert_equal_int(const int l_arg, const int r_arg, const char *test_name) {
     if(int_cmp_func(l_arg, r_arg) == 0)
         printf(ANSI_COLOR_GREEN "%s: passed." ANSI_COLOR_RESET "\n", test_name);
