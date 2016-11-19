@@ -44,10 +44,12 @@ add_custom_target(Install_${PROJECT_NAME}
                   COMMENT "Installing ${PROJECT_NAME}")
 
 if(CYGWIN)
+    # windows cygwin
     set(RUNTIME_DEST_DIR ${CMAKE_SOURCE_DIR}/output/windows/bin)
     set(LIBRARY_DEST_DIR ${CMAKE_SOURCE_DIR}/output/windows/lib)
     set(ARCHIVE_DEST_DIR ${CMAKE_SOURCE_DIR}/output/windows/lib/static)
 else()
+    # unix
     set(RUNTIME_DEST_DIR ${CMAKE_SOURCE_DIR}/output/unix/bin)
     set(LIBRARY_DEST_DIR ${CMAKE_SOURCE_DIR}/output/unix/lib)
     set(ARCHIVE_DEST_DIR ${CMAKE_SOURCE_DIR}/output/unix/lib/static)
