@@ -1,4 +1,4 @@
-# Makefile for UNIX 
+﻿# Makefile for UNIX 
 
 # the compiler: gcc for C program, define as g++ for C++ 
 CC = gcc 
@@ -16,7 +16,7 @@ CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99
 
 #libraries 
 #custom
-COMPARERS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/comparers/libcomparers.a
+COMPARERS_LIBRARY = ../comparers/libcomparers.a
 
 # the build target executable: 
 TARGET = unit_tests
@@ -34,4 +34,4 @@ assertion.o: test/assertion.c test/assertion.h common/terminal.h
 	$(CC) $(CFLAGS) -c test/assertion.c  
 
 clean: 
-	$(RM) $(TARGET) $(LIBRARY) assertion.o
+	$(RM) $(TARGET) $(TARGET).exe $(LIBRARY) assertion.o
