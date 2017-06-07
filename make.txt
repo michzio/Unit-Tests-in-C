@@ -1,4 +1,4 @@
-﻿# Makefile for UNIX 
+# Makefile for UNIX 
 
 # the compiler: gcc for C program, define as g++ for C++ 
 CC = gcc 
@@ -14,24 +14,51 @@ AR = ar rcs
 # -std=c99 use newer version 
 CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99 
 
+# Makefile SOURCE DIRECTORY
+MAKE_SOURCE_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+
 #libraries 
 #custom
-COMPARERS_LIBRARY = ../comparers/libcomparers.a
+COMPARERS_LIBRARY= ../comparers/output/debug/lib/static/libcomparers.a
 
 # the build target executable: 
 TARGET = unit_tests
 LIBRARY = libunit_tests.a
+SHARED_LIBRARY = libunit_tests.so
 
-all: $(TARGET)
+# on macOS build .dylib shared library
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+	DYNAMIC_LIBRARY= libunit_tests.dylib
+else 
+	DYNAMIC_LIBRARY=
+endif
+
+# output directories 
+OUTPUT_DIR = output/debug
+OUTPUT_LIB_DIR = $(OUTPUT_DIR)/lib
+OUTPUT_STATIC_LIB_DIR = $(OUTPUT_LIB_DIR)/static
+OUTPUT_BIN_DIR = $(OUTPUT_DIR)/bin
+
+all: directories libraries $(TARGET)
+
+# make output directories
+directories: 
+	@mkdir -p $(OUTPUT_DIR)
+	@mkdir -p $(OUTPUT_LIB_DIR)
+	@mkdir -p $(OUTPUT_STATIC_LIB_DIR)
+	@mkdir -p $(OUTPUT_BIN_DIR)
+
+libraries: $(LIBRARY)
 
 $(TARGET): $(LIBRARY)
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY) $(COMPARERS_LIBRARY)
+	$(CC) $(CFLAGS) -o $(OUTPUT_BIN_DIR)/$(TARGET) main.c $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(COMPARERS_LIB_PATH)
 
 $(LIBRARY): assertion.o
-	$(AR) $(LIBRARY) assertion.o
+	$(AR) $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OUTPUT_DIR)/assertion.o
 
 assertion.o: test/assertion.c test/assertion.h common/terminal.h
-	$(CC) $(CFLAGS) -c test/assertion.c  
+	$(CC) $(CFLAGS) -c test/assertion.c -o $(OUTPUT_DIR)/assertion.o
 
 clean: 
-	$(RM) $(TARGET) $(TARGET).exe $(LIBRARY) assertion.o
+	$(RM) -rf $(OUTPUT_DIR)

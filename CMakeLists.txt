@@ -20,13 +20,22 @@ set(COMPARERS_PATH ${CMAKE_SOURCE_DIR}/../comparers)
 if(CYGWIN)
     # windows cygwin
     set(COMPARERS_LIB_PATH ${COMPARERS_PATH}/output/windows/lib/static/libcomparers.a)
-else()
+elseif(APPLE)
+    # apple
+
+    # static:
+    # set(COMPARERS_LIB_PATH ${COMPARERS_PATH}/output/unix/lib/static/libcomparers.a)
+
+    # shared:
+    set(COMPARERS_LIB_PATH ${COMPARERS_PATH}/output/unix/lib/libcomparers.dylib)
+
+elseif(UNIX)
     # unix
-    set(COMPARERS_LIB_PATH ${COMPARERS_PATH}/output/unix/lib/static/libcomparers.a)
+
 endif()
 
 add_library(Unit_Tests_Lib SHARED ${SOURCE_FILES})
-set_target_properties(Unit_Tests_Lib PROPERTIES OUTPUT_NAME unit_tests_shared)
+set_target_properties(Unit_Tests_Lib PROPERTIES OUTPUT_NAME unit_tests)
 target_link_libraries(Unit_Tests_Lib ${COMPARERS_LIB_PATH})
 
 add_library(Unit_Tests_Lib_Static ${SOURCE_FILES})

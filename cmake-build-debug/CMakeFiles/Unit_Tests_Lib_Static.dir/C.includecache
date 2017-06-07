@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/comparers/comparer.h
+stdio.h
+-
+
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/common/terminal.h
+
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.c
+stdio.h
+-
+assertion.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.h
+../common/terminal.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/common/terminal.h
+
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.h
+../../comparers/comparer.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/comparers/comparer.h
+

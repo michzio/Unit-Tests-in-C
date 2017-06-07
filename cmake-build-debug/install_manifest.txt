@@ -1,0 +1,3 @@
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/output/unix/bin/unit_tests
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/output/unix/lib/libunit_tests.dylib
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/output/unix/lib/static/libunit_tests.a

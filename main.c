@@ -2,7 +2,7 @@
 
 int main() {
 
-    printf("Unit Tests Library");
+    printf("Unit Tests Library\n");
 
     return 0;
 }
