@@ -190,10 +190,10 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
 //Dependencies for the target
-Unit_Tests_Lib_LIB_DEPENDS:STATIC=general;/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/../comparers/output/unix/lib/libcomparers.dylib;
+Unit_Tests_Lib_LIB_DEPENDS:STATIC=general;Comparers_Lib;
 
 //Dependencies for the target
-Unit_Tests_Lib_Static_LIB_DEPENDS:STATIC=general;/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/../comparers/output/unix/lib/libcomparers.dylib;
+Unit_Tests_Lib_Static_LIB_DEPENDS:STATIC=general;Comparers_Lib_Static;
 
 //Value Computed by CMake
 Unit_Tests_in_C_BINARY_DIR:STATIC=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug

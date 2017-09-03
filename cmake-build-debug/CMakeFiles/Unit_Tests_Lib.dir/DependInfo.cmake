@@ -4,12 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/test/assertion.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../include"
+  "../../comparers/include"
   )
 
 # Targets to which this target links.

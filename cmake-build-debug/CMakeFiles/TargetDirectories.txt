@@ -1,10 +1,5 @@
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/list_install_components.dir
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/Unit_Tests_Lib.dir
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/install/strip.dir
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/install.dir
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/Unit_Tests_in_C.dir
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/Install_Unit_Tests_in_C.dir
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/install/local.dir
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/Unit_Tests_Lib_Static.dir
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles/Unit_Tests_Lib.dir

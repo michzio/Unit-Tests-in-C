@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o"
-  "libunit_tests.pdb"
-  "libunit_tests.a"
+  "CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o"
+  "../outputs/lib/apple/libunit_tests.pdb"
+  "../outputs/lib/apple/libunit_tests.a"
 )
 
 # Per-language clean rules from dependency scanning.

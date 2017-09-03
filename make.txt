@@ -19,7 +19,12 @@ MAKE_SOURCE_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 #libraries 
 #custom
-COMPARERS_LIBRARY= ../comparers/output/debug/lib/static/libcomparers.a
+COMPARERS_LIB_DIR=../comparers/outputs/debug/lib
+COMPARERS_STATIC_LIB_PATH=$(COMPARERS_LIB_DIR)/libcomparers.a
+
+# include directories
+INCLUDE_DIRS= ./include ../comparers/include
+CFLAGS+= $(foreach d, $(INCLUDE_DIRS), -I$d)
 
 # the build target executable: 
 TARGET = unit_tests
@@ -34,31 +39,35 @@ else
 	DYNAMIC_LIBRARY=
 endif
 
-# output directories 
-OUTPUT_DIR = output/debug
-OUTPUT_LIB_DIR = $(OUTPUT_DIR)/lib
-OUTPUT_STATIC_LIB_DIR = $(OUTPUT_LIB_DIR)/static
-OUTPUT_BIN_DIR = $(OUTPUT_DIR)/bin
+# outputs directories
+OUTPUTS_DIR = outputs/debug
+OUTPUTS_LIB_DIR = $(OUTPUTS_DIR)/lib
+OUTPUTS_BIN_DIR = $(OUTPUTS_DIR)/bin
 
 all: directories libraries $(TARGET)
 
-# make output directories
+# make outputs directories
 directories: 
-	@mkdir -p $(OUTPUT_DIR)
-	@mkdir -p $(OUTPUT_LIB_DIR)
-	@mkdir -p $(OUTPUT_STATIC_LIB_DIR)
-	@mkdir -p $(OUTPUT_BIN_DIR)
+	@mkdir -p $(OUTPUTS_DIR)
+	@mkdir -p $(OUTPUTS_LIB_DIR)
+	@mkdir -p $(OUTPUTS_BIN_DIR)
 
-libraries: $(LIBRARY)
+libraries: $(LIBRARY) $(SHARED_LIBRARY) $(DYNAMIC_LIBRARY)
 
 $(TARGET): $(LIBRARY)
-	$(CC) $(CFLAGS) -o $(OUTPUT_BIN_DIR)/$(TARGET) main.c $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(COMPARERS_LIB_PATH)
+	$(CC) $(CFLAGS) -o $(OUTPUTS_BIN_DIR)/$(TARGET) src/main.c $(OUTPUTS_LIB_DIR)/$(LIBRARY) $(COMPARERS_STATIC_LIB_PATH)
+
+$(SHARED_LIBRARY): assertion.o
+	$(CC) $(CFLAGS) -L$(COMPARERS_LIB_DIR) -shared -o $(OUTPUTS_LIB_DIR)/$(SHARED_LIBRARY) $(OUTPUTS_DIR)/assertion.o -lcomparers
+
+$(DYNAMIC_LIBRARY): assertion.o
+	$(CC) $(CFLAGS) -L$(COMPARERS_LIB_DIR) -dynamiclib -o $(OUTPUTS_LIB_DIR)/$(DYNAMIC_LIBRARY) $(OUTPUTS_DIR)/assertion.o -lcomparers
 
 $(LIBRARY): assertion.o
-	$(AR) $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OUTPUT_DIR)/assertion.o
+	$(AR) $(OUTPUTS_LIB_DIR)/$(LIBRARY) $(OUTPUTS_DIR)/assertion.o
 
-assertion.o: test/assertion.c test/assertion.h common/terminal.h
-	$(CC) $(CFLAGS) -c test/assertion.c -o $(OUTPUT_DIR)/assertion.o
+assertion.o: src/test/assertion.c include/test/assertion.h include/common/terminal.h
+	$(CC) $(CFLAGS) -c src/test/assertion.c -o $(OUTPUTS_DIR)/assertion.o
 
 clean: 
-	$(RM) -rf $(OUTPUT_DIR)
+	$(RM) -rf $(OUTPUTS_DIR)

@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = -DUnit_Tests_Lib_EXPORTS
 
-C_INCLUDES = 
+C_INCLUDES = -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/../comparers/include 
 

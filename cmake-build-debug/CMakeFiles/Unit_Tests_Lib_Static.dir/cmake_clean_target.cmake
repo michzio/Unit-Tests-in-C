@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libunit_tests.a"
+  "../outputs/lib/apple/libunit_tests.a"
 )

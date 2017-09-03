@@ -48,8 +48,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Unit_Tests_Lib.dir/DependInfo.cmake"
   "CMakeFiles/Unit_Tests_in_C.dir/DependInfo.cmake"
-  "CMakeFiles/Install_Unit_Tests_in_C.dir/DependInfo.cmake"
   "CMakeFiles/Unit_Tests_Lib_Static.dir/DependInfo.cmake"
+  "CMakeFiles/Unit_Tests_Lib.dir/DependInfo.cmake"
   )

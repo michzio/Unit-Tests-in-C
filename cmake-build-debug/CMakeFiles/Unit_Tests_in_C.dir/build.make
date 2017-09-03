@@ -57,51 +57,51 @@ include CMakeFiles/Unit_Tests_in_C.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Unit_Tests_in_C.dir/flags.make
 
-CMakeFiles/Unit_Tests_in_C.dir/main.c.o: CMakeFiles/Unit_Tests_in_C.dir/flags.make
-CMakeFiles/Unit_Tests_in_C.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Unit_Tests_in_C.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Unit_Tests_in_C.dir/main.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/main.c
+CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o: CMakeFiles/Unit_Tests_in_C.dir/flags.make
+CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o: ../src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/main.c
 
-CMakeFiles/Unit_Tests_in_C.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Unit_Tests_in_C.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/main.c > CMakeFiles/Unit_Tests_in_C.dir/main.c.i
+CMakeFiles/Unit_Tests_in_C.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Unit_Tests_in_C.dir/src/main.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/main.c > CMakeFiles/Unit_Tests_in_C.dir/src/main.c.i
 
-CMakeFiles/Unit_Tests_in_C.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Unit_Tests_in_C.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/main.c -o CMakeFiles/Unit_Tests_in_C.dir/main.c.s
+CMakeFiles/Unit_Tests_in_C.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Unit_Tests_in_C.dir/src/main.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/main.c -o CMakeFiles/Unit_Tests_in_C.dir/src/main.c.s
 
-CMakeFiles/Unit_Tests_in_C.dir/main.c.o.requires:
+CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o.requires:
 
-.PHONY : CMakeFiles/Unit_Tests_in_C.dir/main.c.o.requires
+.PHONY : CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o.requires
 
-CMakeFiles/Unit_Tests_in_C.dir/main.c.o.provides: CMakeFiles/Unit_Tests_in_C.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/Unit_Tests_in_C.dir/build.make CMakeFiles/Unit_Tests_in_C.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/Unit_Tests_in_C.dir/main.c.o.provides
+CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o.provides: CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o.requires
+	$(MAKE) -f CMakeFiles/Unit_Tests_in_C.dir/build.make CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o.provides.build
+.PHONY : CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o.provides
 
-CMakeFiles/Unit_Tests_in_C.dir/main.c.o.provides.build: CMakeFiles/Unit_Tests_in_C.dir/main.c.o
+CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o.provides.build: CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o
 
 
 # Object files for target Unit_Tests_in_C
 Unit_Tests_in_C_OBJECTS = \
-"CMakeFiles/Unit_Tests_in_C.dir/main.c.o"
+"CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o"
 
 # External object files for target Unit_Tests_in_C
 Unit_Tests_in_C_EXTERNAL_OBJECTS =
 
-unit_tests: CMakeFiles/Unit_Tests_in_C.dir/main.c.o
-unit_tests: CMakeFiles/Unit_Tests_in_C.dir/build.make
-unit_tests: libunit_tests.a
-unit_tests: ../../comparers/output/unix/lib/libcomparers.dylib
-unit_tests: CMakeFiles/Unit_Tests_in_C.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable unit_tests"
+../outputs/bin/apple/unit_tests: CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o
+../outputs/bin/apple/unit_tests: CMakeFiles/Unit_Tests_in_C.dir/build.make
+../outputs/bin/apple/unit_tests: ../outputs/lib/apple/libunit_tests.dylib
+../outputs/bin/apple/unit_tests: ../../comparers/outputs/lib/apple/libcomparers.dylib
+../outputs/bin/apple/unit_tests: CMakeFiles/Unit_Tests_in_C.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ../outputs/bin/apple/unit_tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Unit_Tests_in_C.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Unit_Tests_in_C.dir/build: unit_tests
+CMakeFiles/Unit_Tests_in_C.dir/build: ../outputs/bin/apple/unit_tests
 
 .PHONY : CMakeFiles/Unit_Tests_in_C.dir/build
 
-CMakeFiles/Unit_Tests_in_C.dir/requires: CMakeFiles/Unit_Tests_in_C.dir/main.c.o.requires
+CMakeFiles/Unit_Tests_in_C.dir/requires: CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o.requires
 
 .PHONY : CMakeFiles/Unit_Tests_in_C.dir/requires
 

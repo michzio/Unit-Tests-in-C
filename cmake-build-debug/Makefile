@@ -56,16 +56,6 @@ CMAKE_BINARY_DIR = /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tes
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -87,40 +77,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -155,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Unit_Tests_Lib
-
-# Build rule for target.
-Unit_Tests_Lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Unit_Tests_Lib
-.PHONY : Unit_Tests_Lib
-
-# fast build rule for target.
-Unit_Tests_Lib/fast:
-	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/build
-.PHONY : Unit_Tests_Lib/fast
-
-#=============================================================================
 # Target rules for targets named Unit_Tests_in_C
 
 # Build rule for target.
@@ -179,19 +122,6 @@ Unit_Tests_in_C: cmake_check_build_system
 Unit_Tests_in_C/fast:
 	$(MAKE) -f CMakeFiles/Unit_Tests_in_C.dir/build.make CMakeFiles/Unit_Tests_in_C.dir/build
 .PHONY : Unit_Tests_in_C/fast
-
-#=============================================================================
-# Target rules for targets named Install_Unit_Tests_in_C
-
-# Build rule for target.
-Install_Unit_Tests_in_C: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Install_Unit_Tests_in_C
-.PHONY : Install_Unit_Tests_in_C
-
-# fast build rule for target.
-Install_Unit_Tests_in_C/fast:
-	$(MAKE) -f CMakeFiles/Install_Unit_Tests_in_C.dir/build.make CMakeFiles/Install_Unit_Tests_in_C.dir/build
-.PHONY : Install_Unit_Tests_in_C/fast
 
 #=============================================================================
 # Target rules for targets named Unit_Tests_Lib_Static
@@ -206,62 +136,75 @@ Unit_Tests_Lib_Static/fast:
 	$(MAKE) -f CMakeFiles/Unit_Tests_Lib_Static.dir/build.make CMakeFiles/Unit_Tests_Lib_Static.dir/build
 .PHONY : Unit_Tests_Lib_Static/fast
 
-main.o: main.c.o
+#=============================================================================
+# Target rules for targets named Unit_Tests_Lib
 
-.PHONY : main.o
+# Build rule for target.
+Unit_Tests_Lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Unit_Tests_Lib
+.PHONY : Unit_Tests_Lib
 
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/Unit_Tests_in_C.dir/build.make CMakeFiles/Unit_Tests_in_C.dir/main.c.o
-.PHONY : main.c.o
+# fast build rule for target.
+Unit_Tests_Lib/fast:
+	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/build
+.PHONY : Unit_Tests_Lib/fast
 
-main.i: main.c.i
+src/main.o: src/main.c.o
 
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/Unit_Tests_in_C.dir/build.make CMakeFiles/Unit_Tests_in_C.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/Unit_Tests_in_C.dir/build.make CMakeFiles/Unit_Tests_in_C.dir/main.c.s
-.PHONY : main.c.s
-
-test/assertion.o: test/assertion.c.o
-
-.PHONY : test/assertion.o
+.PHONY : src/main.o
 
 # target to build an object file
-test/assertion.c.o:
-	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o
-	$(MAKE) -f CMakeFiles/Unit_Tests_Lib_Static.dir/build.make CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o
-.PHONY : test/assertion.c.o
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/Unit_Tests_in_C.dir/build.make CMakeFiles/Unit_Tests_in_C.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-test/assertion.i: test/assertion.c.i
+src/main.i: src/main.c.i
 
-.PHONY : test/assertion.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-test/assertion.c.i:
-	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.i
-	$(MAKE) -f CMakeFiles/Unit_Tests_Lib_Static.dir/build.make CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.i
-.PHONY : test/assertion.c.i
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/Unit_Tests_in_C.dir/build.make CMakeFiles/Unit_Tests_in_C.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-test/assertion.s: test/assertion.c.s
+src/main.s: src/main.c.s
 
-.PHONY : test/assertion.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-test/assertion.c.s:
-	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.s
-	$(MAKE) -f CMakeFiles/Unit_Tests_Lib_Static.dir/build.make CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.s
-.PHONY : test/assertion.c.s
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/Unit_Tests_in_C.dir/build.make CMakeFiles/Unit_Tests_in_C.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/test/assertion.o: src/test/assertion.c.o
+
+.PHONY : src/test/assertion.o
+
+# target to build an object file
+src/test/assertion.c.o:
+	$(MAKE) -f CMakeFiles/Unit_Tests_Lib_Static.dir/build.make CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o
+	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o
+.PHONY : src/test/assertion.c.o
+
+src/test/assertion.i: src/test/assertion.c.i
+
+.PHONY : src/test/assertion.i
+
+# target to preprocess a source file
+src/test/assertion.c.i:
+	$(MAKE) -f CMakeFiles/Unit_Tests_Lib_Static.dir/build.make CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.i
+	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.i
+.PHONY : src/test/assertion.c.i
+
+src/test/assertion.s: src/test/assertion.c.s
+
+.PHONY : src/test/assertion.s
+
+# target to generate assembly for a file
+src/test/assertion.c.s:
+	$(MAKE) -f CMakeFiles/Unit_Tests_Lib_Static.dir/build.make CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.s
+	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.s
+.PHONY : src/test/assertion.c.s
 
 # Help Target
 help:
@@ -269,22 +212,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... Unit_Tests_Lib"
 	@echo "... edit_cache"
-	@echo "... install/strip"
-	@echo "... install"
 	@echo "... Unit_Tests_in_C"
-	@echo "... Install_Unit_Tests_in_C"
-	@echo "... install/local"
 	@echo "... Unit_Tests_Lib_Static"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... test/assertion.o"
-	@echo "... test/assertion.i"
-	@echo "... test/assertion.s"
+	@echo "... Unit_Tests_Lib"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/test/assertion.o"
+	@echo "... src/test/assertion.i"
+	@echo "... src/test/assertion.s"
 .PHONY : help
 
 

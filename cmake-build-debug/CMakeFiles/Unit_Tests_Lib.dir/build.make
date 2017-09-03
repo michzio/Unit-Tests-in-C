@@ -57,50 +57,50 @@ include CMakeFiles/Unit_Tests_Lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Unit_Tests_Lib.dir/flags.make
 
-CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o: CMakeFiles/Unit_Tests_Lib.dir/flags.make
-CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o: ../test/assertion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.c
+CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o: CMakeFiles/Unit_Tests_Lib.dir/flags.make
+CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o: ../src/test/assertion.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/test/assertion.c
 
-CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.c > CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.i
+CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/test/assertion.c > CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.i
 
-CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.c -o CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.s
+CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/test/assertion.c -o CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.s
 
-CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o.requires:
+CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o.requires:
 
-.PHONY : CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o.requires
+.PHONY : CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o.requires
 
-CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o.provides: CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o.requires
-	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o.provides.build
-.PHONY : CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o.provides
+CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o.provides: CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o.requires
+	$(MAKE) -f CMakeFiles/Unit_Tests_Lib.dir/build.make CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o.provides.build
+.PHONY : CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o.provides
 
-CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o.provides.build: CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o
+CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o.provides.build: CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o
 
 
 # Object files for target Unit_Tests_Lib
 Unit_Tests_Lib_OBJECTS = \
-"CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o"
+"CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o"
 
 # External object files for target Unit_Tests_Lib
 Unit_Tests_Lib_EXTERNAL_OBJECTS =
 
-libunit_tests.dylib: CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o
-libunit_tests.dylib: CMakeFiles/Unit_Tests_Lib.dir/build.make
-libunit_tests.dylib: ../../comparers/output/unix/lib/libcomparers.dylib
-libunit_tests.dylib: CMakeFiles/Unit_Tests_Lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library libunit_tests.dylib"
+../outputs/lib/apple/libunit_tests.dylib: CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o
+../outputs/lib/apple/libunit_tests.dylib: CMakeFiles/Unit_Tests_Lib.dir/build.make
+../outputs/lib/apple/libunit_tests.dylib: ../../comparers/outputs/lib/apple/libcomparers.dylib
+../outputs/lib/apple/libunit_tests.dylib: CMakeFiles/Unit_Tests_Lib.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library ../outputs/lib/apple/libunit_tests.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Unit_Tests_Lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Unit_Tests_Lib.dir/build: libunit_tests.dylib
+CMakeFiles/Unit_Tests_Lib.dir/build: ../outputs/lib/apple/libunit_tests.dylib
 
 .PHONY : CMakeFiles/Unit_Tests_Lib.dir/build
 
-CMakeFiles/Unit_Tests_Lib.dir/requires: CMakeFiles/Unit_Tests_Lib.dir/test/assertion.c.o.requires
+CMakeFiles/Unit_Tests_Lib.dir/requires: CMakeFiles/Unit_Tests_Lib.dir/src/test/assertion.c.o.requires
 
 .PHONY : CMakeFiles/Unit_Tests_Lib.dir/requires
 

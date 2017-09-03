@@ -57,50 +57,50 @@ include CMakeFiles/Unit_Tests_Lib_Static.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Unit_Tests_Lib_Static.dir/flags.make
 
-CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o: CMakeFiles/Unit_Tests_Lib_Static.dir/flags.make
-CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o: ../test/assertion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.c
+CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o: CMakeFiles/Unit_Tests_Lib_Static.dir/flags.make
+CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o: ../src/test/assertion.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/test/assertion.c
 
-CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.c > CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.i
+CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/test/assertion.c > CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.i
 
-CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/test/assertion.c -o CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.s
+CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/src/test/assertion.c -o CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.s
 
-CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o.requires:
+CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o.requires:
 
-.PHONY : CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o.requires
+.PHONY : CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o.requires
 
-CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o.provides: CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o.requires
-	$(MAKE) -f CMakeFiles/Unit_Tests_Lib_Static.dir/build.make CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o.provides.build
-.PHONY : CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o.provides
+CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o.provides: CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o.requires
+	$(MAKE) -f CMakeFiles/Unit_Tests_Lib_Static.dir/build.make CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o.provides.build
+.PHONY : CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o.provides
 
-CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o.provides.build: CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o
+CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o.provides.build: CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o
 
 
 # Object files for target Unit_Tests_Lib_Static
 Unit_Tests_Lib_Static_OBJECTS = \
-"CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o"
+"CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o"
 
 # External object files for target Unit_Tests_Lib_Static
 Unit_Tests_Lib_Static_EXTERNAL_OBJECTS =
 
-libunit_tests.a: CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o
-libunit_tests.a: CMakeFiles/Unit_Tests_Lib_Static.dir/build.make
-libunit_tests.a: CMakeFiles/Unit_Tests_Lib_Static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libunit_tests.a"
+../outputs/lib/apple/libunit_tests.a: CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o
+../outputs/lib/apple/libunit_tests.a: CMakeFiles/Unit_Tests_Lib_Static.dir/build.make
+../outputs/lib/apple/libunit_tests.a: CMakeFiles/Unit_Tests_Lib_Static.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library ../outputs/lib/apple/libunit_tests.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/Unit_Tests_Lib_Static.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Unit_Tests_Lib_Static.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Unit_Tests_Lib_Static.dir/build: libunit_tests.a
+CMakeFiles/Unit_Tests_Lib_Static.dir/build: ../outputs/lib/apple/libunit_tests.a
 
 .PHONY : CMakeFiles/Unit_Tests_Lib_Static.dir/build
 
-CMakeFiles/Unit_Tests_Lib_Static.dir/requires: CMakeFiles/Unit_Tests_Lib_Static.dir/test/assertion.c.o.requires
+CMakeFiles/Unit_Tests_Lib_Static.dir/requires: CMakeFiles/Unit_Tests_Lib_Static.dir/src/test/assertion.c.o.requires
 
 .PHONY : CMakeFiles/Unit_Tests_Lib_Static.dir/requires
 
